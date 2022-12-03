@@ -15,10 +15,14 @@ window.addEventListener("load", function() {
         addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image);
     })
 
+    
+    let faultyItemsElement = document.getElementById('faultyItems');
+    faultyItemsElement.style.visibility = 'hidden';
+
     let formElement = document.querySelector('form');
+
     formElement.addEventListener('submit', function (event) {
-        event.preventDefault();
-        let faultyItemsElement = document.getElementById('faultyItems');
+        event.preventDefault();        
         let pilotName = document.getElementById('pilotName').value;
         let copilotName = document.querySelector('input[name="copilotName"]').value;
         let fuelLevel = document.querySelector('input[name="fuelLevel"]').value;
